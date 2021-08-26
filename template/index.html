@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Unity</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+  <h1>Lets unite</h1>
+  <div>
+      <h2>climate change</h2>
+      <h5>NASA CLIMATE</h5>
+      <ul >
+          {% for link in urls%}
+              <li>
+                  <a  href="{{ link }}">{{texts[urls.index(link)]}}</a>
+              </li>
+          {% endfor %}
+      </ul>
+  </div>
+ <div>
+      <h4>The Gaurdian-Environment</h4>
+      <ul >
+          {% for link in urls1%}
+              <li>
+                  <a  href="{{ link }}">{{texts1[urls1.index(link)]}}</a>
+              </li>
+          {% endfor %}
+      </ul>
+ </div>
+ <div>
+      <h4>Greenpeace</h4>
+      <ul >
+          {% for link in urls2%}
+              <li>
+                  <a  href="{{ link }}">{{texts2[urls2.index(link)]}}</a>
+              </li>
+          {% endfor %}
+      </ul>
+ </div>
+</body>
+</html>
